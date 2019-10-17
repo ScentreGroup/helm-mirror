@@ -21,7 +21,7 @@ spec:
         {{- else if eq .type "route53" }}
         route53:
           region: {{ .config.region }}
-          accessKeyId: {{ .config.accessKeyId }}
+          accessKeyID: {{ .config.accessKeyID }}
           secretAccessKeySecretRef:
             key: {{ .config.secretAccessKeySecretRef.key }}
             name: {{ .config.secretAccessKeySecretRef.name }}
