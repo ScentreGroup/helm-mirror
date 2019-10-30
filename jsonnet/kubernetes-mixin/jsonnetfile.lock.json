@@ -1,0 +1,34 @@
+{
+    "dependencies": [
+        {
+            "name": "kubernetes-mixin",
+            "source": {
+                "git": {
+                    "remote": "https://github.com/kubernetes-monitoring/kubernetes-mixin",
+                    "subdir": ""
+                }
+            },
+            "version": "ba15b2c4d5e5408f98b8479e18a99cfcec0e7704"
+        },
+        {
+            "name": "grafonnet",
+            "source": {
+                "git": {
+                    "remote": "https://github.com/grafana/grafonnet-lib",
+                    "subdir": "grafonnet"
+                }
+            },
+            "version": "47db72da03fc4a7a0658a87791e13c3315a3a252"
+        },
+        {
+            "name": "grafana-builder",
+            "source": {
+                "git": {
+                    "remote": "https://github.com/kausalco/public",
+                    "subdir": "grafana-builder"
+                }
+            },
+            "version": "54865853ebc1f901964e25a2e7a0e4d2cb6b9648"
+        }
+    ]
+}
