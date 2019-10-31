@@ -21,6 +21,6 @@ spec:
   selector:
 {{ toYaml . | indent 4}}
 {{- end }}
-  type: ClusterIP
+  type: {{ .type | default "ClusterIP" }}
 ---
 {{- end }}
