@@ -3,11 +3,14 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  annotations: |
-{{ toYaml .annotations | indent 4 }}
-  labels: |
-{{ toYaml .labels | indent 4 }}
-  name: {{ .name }}
+{{- with .annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+{{- with .labels }}
+  labels:
+{{ toYaml . | indent 4 }}
+{{- end }}
 spec:
   rules:
   - host: {{ .host }}
