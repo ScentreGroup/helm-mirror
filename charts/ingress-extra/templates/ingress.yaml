@@ -20,7 +20,9 @@ spec:
       - backend:
           serviceName: {{ .serviceName }}
           servicePort: {{ .servicePort }}
-        path: /
+{{- with .path }}
+        path: {{ .path }}
+{{- end }}
 {{- with .tls }}
   tls:
 {{ toYaml . | indent 4 }}
