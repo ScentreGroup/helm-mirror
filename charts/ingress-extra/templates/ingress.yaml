@@ -22,9 +22,7 @@ spec:
         path: /
 {{- with .tls }}
   tls:
-  - hosts:
-    - {{ .host }}
-    secretName: "tls-{{ $name }}"
+{{ toYaml . | indent 4 }}
 {{- end }}
 ---
 {{- end }}
