@@ -28,9 +28,9 @@ spec:
         {{- else if eq .type "cloudflare" }}
         cloudflare:
           email: {{ .config.email }}
-          apiTokenSecretRef:
-            name: {{ .config.apiTokenSecretRef.name }}
-            key: {{ .config.apiTokenSecretRef.key }}
+          apiKeySecretRef:
+            name: {{ .config.apiKeySecretRef.name }}
+            key: {{ .config.apiKeySecretRef.key }}
         {{- end }}
 
 ---
