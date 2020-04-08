@@ -16,9 +16,11 @@ spec:
         {{- if eq .type "clouddns" }}
         clouddns:
           project: {{ .config.projectId }}
+          {{- if hasKey .config "serviceAccountSecretRef" }}
           serviceAccountSecretRef:
             key: {{ .config.serviceAccountSecretRef.key }}
             name: {{ .config.serviceAccountSecretRef.name }}
+          {{- end }}
         {{- else if eq .type "route53" }}
         route53:
           region: {{ .config.region }}
