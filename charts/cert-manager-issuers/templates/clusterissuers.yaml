@@ -31,9 +31,16 @@ spec:
         {{- else if eq .type "cloudflare" }}
         cloudflare:
           email: {{ .config.email }}
+          {{- with .config.apiKeySecretRef }}
           apiKeySecretRef:
-            name: {{ .config.apiKeySecretRef.name }}
-            key: {{ .config.apiKeySecretRef.key }}
+            name: {{ .name }}
+            key: {{ .key }}
+          {{- end }}
+          {{- with .config.apiTokenSecretRef }}
+          apiTokenSecretRef:
+            name: {{ .name }}
+            key: {{ .key }}
+          {{- end }}
         {{- end }}
       {{- if .domains }}
       selector:
