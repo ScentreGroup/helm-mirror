@@ -6,6 +6,9 @@ metadata:
   name: {{ .config.name }}
   namespace: cert-manager
 spec:
+{{- if eq .type "selfsigned" }}
+  selfSigned: {}
+{{- else }}
   acme:
     server: {{ .config.server }}
     email: {{ .config.email }}
@@ -49,6 +52,6 @@ spec:
         - {{ . | quote }}
         {{- end }}
       {{- end }}
-
+{{- end }}
 ---
 {{- end }}
