@@ -4498,8 +4498,6 @@ metadata:
   name: orders.acme.cert-manager.io
   annotations:
     cert-manager.io/inject-ca-from-secret: {{ .Values.certmanager.injectCAFromSecret }}
-  labels:
-    {{- include "certManager.CRDLabels" . | nindent 4 }}
 spec:
   group: acme.cert-manager.io
   names:
