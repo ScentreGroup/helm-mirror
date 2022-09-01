@@ -1,4 +1,5 @@
 certmanager:
   enabled: true
   newCRDs: false
+  lastestCRDs: false
   injectCAFromSecret: cert-manager/cert-manager-webhook-tls
