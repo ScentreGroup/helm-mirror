@@ -1,2 +1,2 @@
 clusterIssuers: []
-apiVersion: cert-manager.io/v1
+apiVersion: certmanager.k8s.io/v1
