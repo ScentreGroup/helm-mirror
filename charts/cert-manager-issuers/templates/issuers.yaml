@@ -1,7 +1,7 @@
 {{ $apiVersion := .Values.apiVersion }}
 {{- range .Values.clusterIssuers }}
 apiVersion: {{ $apiVersion }}
-kind: ClusterIssuer
+kind: Issuer
 metadata:
   name: {{ .config.name }}
   namespace: cert-manager
