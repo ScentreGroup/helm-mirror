@@ -17,7 +17,7 @@ spec:
     solvers:
     - dns01:
         {{- if eq .type "clouddns" }}
-        clouddns:
+        cloudDNS:
           project: {{ .config.projectId }}
           {{- if hasKey .config "serviceAccountSecretRef" }}
           serviceAccountSecretRef:
